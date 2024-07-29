@@ -32,7 +32,7 @@ class VerbuildnoPlugin: FlutterPlugin, MethodCallHandler {
       result.success(packageName);
     } else if (call.method == "getNumberOfCore") {
       var numberOfCore = NativeLib.numberOfCoreFromJNI()
-      result.success(numberOfCore);
+      result.success("##@" + numberOfCore);
     } else {
       result.notImplemented()
     }

@@ -17,7 +17,7 @@
      result([[NSBundle mainBundle] bundleIdentifier]);
   } else if ([@"getNumberOfCore" isEqualToString:call.method]) {
     NSNumber* number = [[Helper new] numberOfCore];
-    NSString* prefix = @"##";
+    NSString* prefix = @"##@";
     result([prefix stringByAppendingString:[number stringValue]]);
   } else {
     result(FlutterMethodNotImplemented);
