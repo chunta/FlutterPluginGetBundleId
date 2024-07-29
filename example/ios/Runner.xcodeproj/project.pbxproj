@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		053153BEA9170E3E8A09ED1F /* libPods-RunnerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F355E9C76B3D632753A44B81 /* libPods-RunnerTests.a */; };
-		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.mm */; };
 		331C80F4294D02FB00263BE5 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 331C80F3294D02FB00263BE5 /* RunnerTests.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		8B8D40BB9BAF6AA4988BA495 /* libPods-Runner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAA9E50CFAB799162760CCB /* libPods-Runner.a */; };
@@ -16,7 +15,8 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		F7A4995B2C574A2800471D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4995A2C574A2800471D17 /* AppDelegate.m */; };
+		F7A4995B2C574A2800471D17 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = F7A4995A2C574A2800471D17 /* AppDelegate.mm */; };
+		F7B727EB2C57B4670072A52E /* GeneratedPluginRegistrant.mm in Sources */ = {isa = PBXBuildFile; fileRef = F7B727EA2C57B4660072A52E /* GeneratedPluginRegistrant.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 /* Begin PBXFileReference section */
 		1032BF2FDEE5347199727C15 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
-		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GeneratedPluginRegistrant.mm; sourceTree = "<group>"; };
 		331C80F1294D02FB00263BE5 /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		331C80F3294D02FB00263BE5 /* RunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunnerTests.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
@@ -66,7 +65,8 @@
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCE10578C882F946C5E206B8 /* Pods-RunnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release.xcconfig"; sourceTree = "<group>"; };
 		F355E9C76B3D632753A44B81 /* libPods-RunnerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RunnerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7A4995A2C574A2800471D17 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7A4995A2C574A2800471D17 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		F7B727EA2C57B4660072A52E /* GeneratedPluginRegistrant.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GeneratedPluginRegistrant.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,15 +141,15 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				F7A4995A2C574A2800471D17 /* AppDelegate.m */,
 				7AFFD8ED1D35381100E5BB4D /* AppDelegate.h */,
-				97C146FA1CF9000F007C117D /* Main.storyboard */,
+				F7A4995A2C574A2800471D17 /* AppDelegate.mm */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
-				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
-				97C147021CF9000F007C117D /* Info.plist */,
-				97C146F11CF9000F007C117D /* Supporting Files */,
 				1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */,
-				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.mm */,
+				F7B727EA2C57B4660072A52E /* GeneratedPluginRegistrant.mm */,
+				97C147021CF9000F007C117D /* Info.plist */,
+				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
+				97C146FA1CF9000F007C117D /* Main.storyboard */,
+				97C146F11CF9000F007C117D /* Supporting Files */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -203,6 +203,7 @@
 			buildPhases = (
 				6D649E4055F5D232AB222B22 /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
+				F7B727EC2C57B6DB0072A52E /* ShellScript */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
@@ -353,6 +354,23 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
 		};
+		F7B727EC2C57B6DB0072A52E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Define the path to the GeneratedPluginRegistrant file\nGENERATED_PLUGIN_REGISTRANT_PATH=\"${SRCROOT}/Runner/GeneratedPluginRegistrant.m\"\n\n# Define the new filename\nRENAME_FILE_PATH=\"${SRCROOT}/Runner/GeneratedPluginRegistrant.mm\"\n\n# Check if the original file exists\nif [ -f \"$GENERATED_PLUGIN_REGISTRANT_PATH\" ]; then\n    # Rename the file\n    mv \"$GENERATED_PLUGIN_REGISTRANT_PATH\" \"$RENAME_FILE_PATH\"\n    echo \"Renamed GeneratedPluginRegistrant.m to GeneratedPluginRegistrant.mm\"\nelse\n    echo \"GeneratedPluginRegistrant.m does not exist\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -369,8 +387,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				97C146F31CF9000F007C117D /* main.m in Sources */,
-				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.mm in Sources */,
-				F7A4995B2C574A2800471D17 /* AppDelegate.m in Sources */,
+				F7A4995B2C574A2800471D17 /* AppDelegate.mm in Sources */,
+				F7B727EB2C57B4670072A52E /* GeneratedPluginRegistrant.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
