@@ -30,4 +30,8 @@ abstract class VerbuildnoPlatform extends PlatformInterface {
   Future<String?> getBundleIdentifer() {
     return _instance.getBundleIdentifer();
   }
+
+  Future<String?> getNumberOfCore() {
+    return _instance.getNumberOfCore();
+  }
 }

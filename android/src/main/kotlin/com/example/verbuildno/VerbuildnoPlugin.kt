@@ -27,8 +27,12 @@ class VerbuildnoPlugin: FlutterPlugin, MethodCallHandler {
     if (call.method == "getPlatformVersion") {
       result.success("Android ${android.os.Build.VERSION.RELEASE}")
     } else if (call.method == "getBundleIdentifer") {
-      val packageName = context.packageName
+      var nativeString = NativeLib.stringFromJNI()
+      val packageName = context.packageName + nativeString
       result.success(packageName);
+    } else if (call.method == "getNumberOfCore") {
+      var numberOfCore = NativeLib.numberOfCoreFromJNI()
+      result.success(numberOfCore);
     } else {
       result.notImplemented()
     }

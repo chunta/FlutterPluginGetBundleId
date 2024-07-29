@@ -1,6 +1,6 @@
 name: verbuildno
-description: "A plugin that can get bundle id."
-version: 0.0.1
+description: "A plugin that can get bundle id and number of cpu core."
+version: 0.0.2
 homepage: 'https://www.getsafeonline.org/checkawebsite/'
 
 environment:

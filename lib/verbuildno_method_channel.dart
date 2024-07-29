@@ -11,13 +11,22 @@ class MethodChannelVerbuildno extends VerbuildnoPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version =
+        await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
 
   @override
   Future<String?> getBundleIdentifer() async {
-    final bundleIdentifer = await methodChannel.invokeMethod<String>('getBundleIdentifer');
+    final bundleIdentifer =
+        await methodChannel.invokeMethod<String>('getBundleIdentifer');
     return bundleIdentifer;
+  }
+
+  @override
+  Future<String?> getNumberOfCore() async {
+    final numberOfCore =
+        await methodChannel.invokeMethod<String>('getNumberOfCore');
+    return numberOfCore;
   }
 }

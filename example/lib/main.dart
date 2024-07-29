@@ -18,6 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
   String _bundleIdentifier = 'Unknown';
+  String _numberOfCore = 'Unknown';
 
   final _verbuildnoPlugin = Verbuildno();
 
@@ -31,6 +32,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     String platformVersion;
     String bundleIdentifier;
+    String numberOfCore;
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
@@ -47,6 +49,13 @@ class _MyAppState extends State<MyApp> {
       bundleIdentifier = 'Failed to get bundle identifier.';
     }
 
+    try {
+      numberOfCore = await _verbuildnoPlugin.getNumberOfCore() ??
+          'Unknown number of core';
+    } on Exception {
+      numberOfCore = 'Failed to get number of core.';
+    }
+
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
@@ -55,6 +64,7 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _platformVersion = platformVersion;
       _bundleIdentifier = bundleIdentifier;
+      _numberOfCore = numberOfCore;
     });
   }
 
@@ -70,6 +80,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               Text('Bundle Id: $_bundleIdentifier\n'),
               Text('Running on: $_platformVersion\n'),
+              Text('Number Of Core: $_numberOfCore')
             ],
           ),
         ),

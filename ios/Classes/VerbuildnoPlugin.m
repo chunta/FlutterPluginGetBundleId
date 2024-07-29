@@ -1,4 +1,5 @@
 #import "VerbuildnoPlugin.h"
+#import "Helper.h"
 
 @implementation VerbuildnoPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
@@ -13,7 +14,10 @@
   if ([@"getPlatformVersion" isEqualToString:call.method]) {
     result([@"iOS " stringByAppendingString:[[UIDevice currentDevice] systemVersion]]);
   } else if ([@"getBundleIdentifer" isEqualToString:call.method]) {
-    result([[NSBundle mainBundle] bundleIdentifier]);
+     result([[NSBundle mainBundle] bundleIdentifier]);
+  } else if ([@"getNumberOfCore" isEqualToString:call.method]) {
+    NSNumber* number = [[Helper new] numberOfCore];
+    result([number stringValue]);
   } else {
     result(FlutterMethodNotImplemented);
   }

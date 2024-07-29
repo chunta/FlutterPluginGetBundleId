@@ -31,6 +31,12 @@ android {
 
     compileSdk = 34
 
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -52,6 +58,11 @@ android {
     dependencies {
         testImplementation("org.jetbrains.kotlin:kotlin-test")
         testImplementation("org.mockito:mockito-core:5.0.0")
+    }
+
+    dependencies {
+        // Other dependencies...
+        implementation fileTree(dir: "libs", include: ["*.jar"])
     }
 
     testOptions {

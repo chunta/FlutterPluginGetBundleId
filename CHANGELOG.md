@@ -1,3 +1,3 @@
-## 0.0.1
+## 0.0.1 have a method to get bundle identifer
 
-* TODO: Describe initial release.
+## 0.0.2 have a method to get number of core
